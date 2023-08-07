@@ -1,0 +1,31 @@
+<div class="container">
+    <mat-card class="card">
+        <mat-card-header class="card-header">
+            <mat-card-title>Registration Form</mat-card-title>
+        </mat-card-header>
+
+        <form class="registration-form" [formGroup]="form" (ngSubmit)="submit()">
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="username" placeholder="Enter your name" name="usename" [(ngModel)]="username">
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Enter your email" value="" name="email" type="email" [(ngModel)]="email">
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]="password">
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Bio</mat-label>
+                <textarea matInput formControlName="bio" placeholder="Enter your Bio" value="" name="bio" type="bio" [(ngModel)]="bio"></textarea>
+            </mat-form-field>
+            <button mat-raised-button color="primary">Submit</button>
+
+            <div *ngIf="retry">
+                <button mat-button color="warning">Sorry, Login failed. Please retry !!</button>
+            </div>
+        </form>
+    </mat-card>
+</div>

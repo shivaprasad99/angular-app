@@ -1,0 +1,22 @@
+.info-text {
+    display: block;
+}
+
+.info-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.5rem;
+    clip-path: circle();
+}
+
+.card {
+    max-width: 50%;
+    margin: auto;
+    padding: 1.6rem;
+    top: 2.4rem;
+}
+
+.card-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}

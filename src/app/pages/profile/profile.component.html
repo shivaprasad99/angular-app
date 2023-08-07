@@ -1,0 +1,22 @@
+<ng-container *ngIf="userInfo$ | async; let userInfo">
+    <mat-card class="card">
+        <mat-card-header class="secondary">
+            <div mat-card-avatar class="card-header-image"></div>
+            <mat-card-title>My Profile</mat-card-title>
+            <mat-card-subtitle>{{userInfo?.name}}</mat-card-subtitle>
+        </mat-card-header>
+        <hr>
+        <div class="info-text">
+            <mat-label>
+                <strong>Bio:</strong> {{userInfo?.bio}}</mat-label>
+        </div>
+        <div class="info-text">
+            <mat-label>
+                <strong>Email:</strong> {{userInfo?.email}}</mat-label>
+        </div>
+        <div class="info-image">
+            Image:
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        </div>
+    </mat-card>
+</ng-container>
